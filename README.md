@@ -1,4 +1,4 @@
-# 2024.2 - Avaliação sobre Estado de Tarefas
+gfg# 2024.2 - Avaliação sobre Estado de Tarefas
 
 ## Informações básicas
 
@@ -69,9 +69,16 @@ por fim, considere a tabela abaixo:
 | 08   | --    | su 2       | ex linha 1 | --         | t3         |
 | 09   | ex t3 | pr         | su 1       | --         | t1         |
 | 10   | --    | --         | su 2       | ex linha 1 | t1         |
-| 11   | ??    | ??         | ??         | ??         | t1         |
-| 12   | ??    | ??         | ??         | ??         | t1         |
-
+| 11   | ??    | ??         | ??         | su 1       | t1         |
+| 12   | ex t1 | ??         | ??         | su 2       | t1         |
+| 13   | ??    | ex linha 2 | ??         | ??         | t2, t3     |
+| 14   | ex t2 | su 1       | ??         | ??         | t2, t3     |   |
+| 15   | ??    | su 2       | ex linha 2 | ??         | t1         |
+| 16   | ex t3 | ??         | su 1       | ??         | t1         |
+| 17   | ??    | ??         | su 2       | ex linha 2 | t1         |
+| 18   | ??    | ??         | ??         | su 1       | t1         |
+| 19   | ??    | ??         | ??         | su 2       | t1         |
+| 20   | ??    | ??         | ??         | ??         | t1         |
 ## Tarefa 1 - fatia tempo com valor 1 tick
 
 continue o preenchimento da tabela abaixo, considerando que o sistema operacional tem 1 _tick_ como valor da fatia de tempo (_quantum_ ou _time slice_).
@@ -85,11 +92,22 @@ continue o preenchimento da tabela abaixo, considerando que o sistema operaciona
 | 05   | ex t1 | --         | --         | pr         | t2, t3     |
 | 06   | --    | ex linha 1 | --         | --         | t2, t3     |
 | 07   | ex t2 | su 1       | --         | --         | t2, t3     |
-| 08   | --    | su 2       | ex linha 1 | --         | t3         |
+| 08   | --    | pr         | ex linha 1 | --         | t3         |
 | 09   | ex t3 | pr         | su 1       | --         | t1         |
 | 10   | --    | --         | su 2       | ex linha 1 | t1         |
-| 11   | ??    | ??         | ??         | ??         | t1         |
-| 12   | ??    | ??         | ??         | ??         | t1         |
+| 11   | ex t1 | ??         | ??         | su 1       | t1         |
+| 12   | --    | ex linha 2 | ??         | su 2       | t1         |
+| 13   | ex t2 | su 1       | ??         | ??         | t2, t3     |
+| 14   |       | su 2       | ex linha 2 | ??         | t2, t3     |   |
+| 15   | ex t3 |            | su 1       | ??         | t1         |
+| 16   |       | ??         | su 2       | ex linha 2 | t1         |
+| 17   | ??    | ??         | --         | su 1       | t1         |
+| 18   | ??    | ??         | ??         | su 2       | t1         |
+| 19   | ??    | ??         | ??         |            | t1         |
+| 20   | ??    | ??         | ??         | ??         | t1         |
+| 21   | ??    | ??         | ??         | ??         | t1         |
+| 22   | ??    | ??         | ??         | ??         | t1         |
+| 23   | ??    | ??         | ??         | ??         | t1         |
 
 ## Tarefa 2 - fatia tempo com valor 10 ticks
 
